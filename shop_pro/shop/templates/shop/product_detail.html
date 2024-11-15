@@ -1,0 +1,26 @@
+<!-- product_detail.html -->
+
+{% extends "shop/base_generic.html" %}
+
+{% block content %}
+    <h2>{{ product.title }}</h2>
+    <img src="{{ product.image.url }}" alt="{{ product.title }}">
+    <p>{{ product.description }}</p>
+    <p>Price: ${{ product.price }}</p>
+
+    <!-- Add to Cart Form -->
+    <form method="POST" action="{% url 'add_to_cart' product.id %}">
+        {% csrf_token %}
+        
+        <!-- Quantity input -->
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" name="quantity" id="quantity" class="form-control" value="1" min="1" required>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button type="submit" class="btn btn-primary">Add to Cart</button>
+    </form>
+
+    <a href="{% url 'product_list' %}" class="btn btn-secondary mt-3">Back to Products</a>
+{% endblock %}

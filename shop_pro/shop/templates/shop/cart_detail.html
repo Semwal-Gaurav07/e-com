@@ -1,0 +1,38 @@
+{% extends 'shop/base_generic.html' %}
+
+{% block content %}
+    <h1>Your Shopping Cart</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through each item in the cart -->
+            {% for item in cart.items.all %}
+                <tr>
+                    <td>{{ item.product.title }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.product.price }}</td>
+                    <td>${{ item.get_total_price }}</td>
+                    <td>
+                        <!-- Button to reduce the quantity by 1 -->
+                        <a href="{% url 'update_cart_quantity' item.id 1 %}" class="btn btn-warning">Remove 1</a>
+                        <a href="{% url 'update_cart_quantity' item.id 1 %}" class="btn btn-success">Add 1</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Price</td>
+                <td>${{ cart.get_total_price }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

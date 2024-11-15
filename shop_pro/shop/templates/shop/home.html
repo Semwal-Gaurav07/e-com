@@ -1,0 +1,23 @@
+{% extends "shop/base_generic.html" %}
+
+{% block content %}
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="row">
+        {% for product in products %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <!-- Wrap the image in a link to the product detail page -->
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.title }}</h5>
+                        <p class="card-text">Price: ${{ product.price }}</p>
+                        <!-- Link to the product detail page for more details -->
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

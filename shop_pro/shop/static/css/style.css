@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Font for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    min-height: 100vh; /* Make sure the body takes at least the full height of the viewport */
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+/* Main Content Area */
+.container.marketing {
+    flex: 1; /* Allow the main content area to grow and fill the space */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background for the footer */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding for the footer */
+    position: relative; /* Position relative to the normal flow */
+}
+
+/* Button Styles */
+.btn-link {
+    color: #ffffff; /* White color for link buttons */
+}
+
+.btn-link:hover {
+    color: #adb5bd; /* Light gray on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: #343a40; /* Dark background for dropdown */
+}
+
+.dropdown-item {
+    color: #ffffff; /* White text color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+/* Search Form Styles */
+.navbar-search input[type="search"] {
+    width: 200px; /* Set a width for the search input */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-search {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

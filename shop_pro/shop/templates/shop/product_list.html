@@ -1,0 +1,16 @@
+<!-- templates/product/product_list.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Product List</h2>
+  <a href="{% url 'product_create' %}" class="btn btn-primary">Add Product</a>
+  <ul>
+    {% for product in products %}
+      <li>
+        {{ product.title }} - {{ product.price }} - {{ product.category.name }}
+        <a href="{% url 'product_update' product.pk %}">Edit</a>
+        <a href="{% url 'product_delete' product.pk %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

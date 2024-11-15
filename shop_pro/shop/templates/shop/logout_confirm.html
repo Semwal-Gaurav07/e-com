@@ -1,0 +1,11 @@
+{% extends "shop/base_generic.html" %}
+
+{% block content %}
+  <h2>Are you sure you want to log out?</h2>
+  <!-- Form for POST request -->
+  <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, Logout</button>
+  </form>
+  <a href="{% url 'home' %}" class="btn btn-secondary">No, Stay Logged In</a>
+{% endblock %}

@@ -1,0 +1,636 @@
+{% extends "shop/base_generic.html" %}
+
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176058743-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176058743-2');
+</script>
+
+
+
+    <title>Homepage - B</title>
+  </head>
+  {% load static %}
+  <body>
+
+
+    <!-- header -->
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176058743-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-176058743-2');
+    </script>
+    
+    
+    <title>Homepage - B</title>
+      </head>
+      <body>
+    
+        <!-- header -->
+        <header class="header header-absolute">
+          <div class="container">
+            <div class="row">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="navbar-brand order-1 order-lg-2"><img src="" alt="Logo"></a>
+    
+                <div class="collapse navbar-collapse order-4 order-lg-1" id="navbarMenu">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown dropdown-sm dropdown-hover">
+                      <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+                        <ul class="menu-list">
+                          <li class="menu-list-item"><a href="index.html" class="menu-list-link">Homepage A</a></li>
+                          <li class="menu-list-item"><a href="index-2.html" class="menu-list-link">Homepage B</a></li>
+                          <li class="menu-list-item"><a href="index-3.html" class="menu-list-link">Homepage C</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-lg dropdown-hover">
+                      <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Template
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+                        <ul class="menu-list">
+                          <li class="menu-list-item"><a href="listing.html" class="menu-list-link">Listing sidebar</a></li>
+                          <li class="menu-list-item"><a href="listing-2.html" class="menu-list-link">Listing full width</a></li>
+                          <li class="menu-list-item"><a href="product.html" class="menu-list-link">Product default</a></li>
+                          <li class="menu-list-item"><a href="product-2.html" class="menu-list-link">Product carousel</a></li>
+                          <li class="menu-list-item"><a href="lookbook.html" class="menu-list-link">Lookbook</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="documentation.html">
+                        Docs
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown-lg dropdown-hover">
+                      <a class="nav-link dropdown-toggle text-red" href="#!" id="navbarDropdown-3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sale
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown-3">
+                        <ul class="menu-list">
+                          <li class="menu-list-item"><a href="#" class="menu-list-link">50% Sale on Cardigans</a></li>
+                          <li class="menu-list-item"><a href="#" class="menu-list-link">20% Sale on Jewelery</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+    
+                <div class="collapse navbar-collapse order-5 order-lg-3" id="navbarMenu2">
+                  <ul class="navbar-nav ml-auto position-relative">
+    
+                    <!-- search -->
+                    <li class="nav-item dropdown dropdown-md dropdown-hover">
+                      <a class="nav-icon dropdown-toggle" id="navbarDropdown-4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-search d-none d-lg-inline-block"></i>
+                        <span class="d-inline-block d-lg-none">Search</span>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="searchForm" placeholder="Search">
+                        </div>
+                      </div>
+                    </li>
+    
+                    <!-- localisation -->
+                    <li class="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">
+                      <a class="nav-icon" id="navbarDropdown-5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-globe"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown-5">
+                        <fieldset>
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="select-frame">
+                                <select class="custom-select custom-select-lg" id="countrySelect1">
+                                  <option value="1">Country 1</option>
+                                  <option value="2">Country 2</option>
+                                  <option value="3">Country 3</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="select-frame">
+                                <select class="custom-select custom-select-lg" id="curencySelect1">
+                                  <option value="1">Currency 1</option>
+                                  <option value="2">Currency 2</option>
+                                  <option value="3">Currency 3</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </li>
+    
+                    <!-- user area -->
+                    <li class="nav-item dropdown dropdown-md dropdown-hover">
+                      <a class="nav-icon dropdown-toggle" id="navbarDropdown-6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-user d-none d-lg-inline-block"></i>
+                        <span class="d-inline-block d-lg-none">Account</span>
+                      </a>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown-6">
+                    <div class="row gutter-2">
+                      <div class="col-12">
+                        <fieldset>
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-label-group">
+                                <input type="text" id="inputName" class="form-control form-control-lg" placeholder="Name" required="" value="Dumitru">
+                                <label for="inputName">First Name</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-label-group">
+                                <input type="text" id="inputSurname" class="form-control form-control-lg" placeholder="Surname" required="">
+                                <label for="inputSurname">Surname</label>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div class="col-12 text-center">
+                        <a href="" class="underline fs-14">Forgot Password ?</a>
+                      </div>
+                      <div class="col-12">
+                        <a href="" class="btn btn-primary btn-block">Sign In</a>
+                        <a href="" class="btn btn-outline-secondary btn-block">Create Account</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- favourites -->
+                <li class="d-none d-lg-inline nav-item dropdown dropdown-md dropdown-hover">
+                  <a class="nav-icon" id="navbarDropdown-7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-heart"></i></a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown-7">
+                    <div class="row gutter-3">
+                      <div class="col-12">
+                        <h3 class="eyebrow text-dark fs-16 mb-1">My Favorites</h3>
+                        <p class="text-muted fs-14"><a href="" class="underline">Sign in</a> to keep your saves for up to 60 days.</p>
+                      </div>
+                      <div class="col-12">
+                        <div class="cart-item">
+                          <a href="#!" class="cart-item-image"><img src="assets/images/demo/product-1.jpg" alt="Image"></a>
+                          <div class="cart-item-body">
+                            <div class="row">
+                              <div class="col-9">
+                                <h5 class="cart-item-title">Bold Cuff Insert Polo Shirt</h5>
+                                <small>Fred Perry</small>
+                                <ul class="list list--horizontal fs-14">
+                                  <li><s>$85.00</s></li>
+                                  <li class="text-red">$42.00</li>
+                                </ul>
+                              </div>
+                              <div class="col-3 text-right">
+                                <ul class="cart-item-options">
+                                  <li><a href="" class="icon-x"></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <a href="" class="btn btn-primary btn-block">Add all to cart</a>
+                        <a href="" class="btn btn-outline-secondary btn-block">View favorites</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- cart -->
+                <li class="nav-item dropdown dropdown-md dropdown-hover">
+                  <a class="nav-icon dropdown-toggle" id="navbarDropdown-8" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon-shopping-bag d-none d-lg-inline-block"></i>
+                    <span class="d-inline-block d-lg-none">Bag</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown-8">
+                    <div class="row gutter-3">
+                      <div class="col-12">
+                        <h3 class="eyebrow text-dark fs-16 mb-0">My Bag</h3>
+                      </div>
+                      <div class="col-12">
+                        <div class="cart-item">
+                          <a href="#!" class="cart-item-image"><img src="assets/images/demo/product-1.jpg" alt="Image"></a>
+                          <div class="cart-item-body">
+                            <div class="row">
+                              <div class="col-9">
+                                <h5 class="cart-item-title">Bold Cuff Insert Polo Shirt</h5>
+                                <small>Fred Perry</small>
+                                <ul class="list list--horizontal fs-14">
+                                  <li><s>$85.00</s></li>
+                                  <li class="text-red">$42.00</li>
+                                </ul>
+                              </div>
+                              <div class="col-3 text-right">
+                                <ul class="cart-item-options">
+                                  <li><a href="" class="icon-x"></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <ul class="list-group list-group-minimal">
+                          <li class="list-group-item d-flex justify-content-between align-items-center text-uppercase font-weight-bold">
+                            Subtotal
+                            <span>$78.00</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12">
+                        <a href="" class="btn btn-primary btn-block">Add all to cart</a>
+                        <a href="" class="btn btn-outline-secondary btn-block">View favorites</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="order-2 d-flex d-lg-none" id="navbarMenuMobile">
+              <ul class="navbar-nav navbar-nav--icons ml-auto position-relative">
+
+                <!-- search -->
+                <li class="nav-item">
+                  <a href="" class="nav-icon"><i class="icon-search"></i></a>
+                </li>
+
+                <!-- cart -->
+                <li class="nav-item dropdown dropdown-md dropdown-hover">
+                  <a href="" class="nav-icon"><i class="icon-shopping-bag"></i></a>
+                </li>
+
+                <!-- menu -->
+                <li class="nav-item dropdown dropdown-md dropdown-hover">
+                  <a href="" class="nav-icon" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon-menu"></i>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- categories -->
+    <section class="py-0">
+      <div class="container-full">
+        <div class="row gutter-0">
+          <div class="col-md-6">
+            <div class="card card-tile">
+              <figure class="card-image equal vh-50 vh-md-100">
+                <span class="image image--scroll" style="background-image: url(assets/images/demo/index2-slide-2.jpg)"
+                  data--100-bottom-top="transform: translateY(0%);"
+                  data-top-bottom="transform: translateY(25%);"></span>
+              </figure>
+              <div class="card-footer text-white p-lg-5">
+                <div class="row gutter-1">
+                  <div class="col-md-8">
+                    <h2>Cotton Cardigans</h2>
+                  </div>
+                  <div class="col-md-4 text-md-right">
+                    <a href="" class="btn btn-outline-white">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-tile">
+              <figure class="card-image equal vh-50 vh-md-100">
+                <span class="image image--scroll" style="background-image: url(assets/images/demo/index2-slide-1.jpg)"
+                  data--100-bottom-top="transform: translateY(0%);"
+                  data-top-bottom="transform: translateY(25%);"></span>
+              </figure>
+              <div class="card-footer text-white p-lg-5">
+                <div class="row gutter-1">
+                  <div class="col-md-8">
+                    <h2>Fancy Jewelery</h2>
+                  </div>
+                  <div class="col-md-4 text-md-right">
+                    <a href="" class="btn btn-outline-white">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- categories -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <span class="eyebrow text-muted">Shop New Look</span>
+            <h2>Black Casual Look</h2>
+          </div>
+        </div>
+        <div class="row gutter-1">
+          <div class="col-lg-6">
+            <figure class="equal">
+              <span class="image" style="background-image: url(assets/images/demo/image-5.jpg)"></span>
+            </figure>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card card-product mb-1">
+              <figure class="card-image equal">
+                <a href="#!" class="image">
+                  <img src="assets/images/demo/look-1.jpg" alt="Image">
+                  <img src="assets/images/demo/look-1-2.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <h3 class="card-title">Black Blazzer</h3>
+                <span class="price">$98.00</span>
+              </a>
+            </div>
+            <div class="card card-product">
+              <figure class="card-image equal">
+                <a href="#!" class="image">
+                  <img src="assets/images/demo/look-3.jpg" alt="Image">
+                  <img src="assets/images/demo/look-3-1.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <h3 class="card-title">Gold Earrings</h3>
+                <span class="price">$260.00</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card card-product mb-1">
+              <figure class="card-image equal">
+                <a href="#!" class="image">
+                  <img src="assets/images/demo/look-2.jpg" alt="Image">
+                  <img src="assets/images/demo/look-2-1.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <h3 class="card-title">Black T-Shirt</h3>
+                <span class="price">$24.00</span>
+              </a>
+            </div>
+            <div class="card card-product">
+              <figure class="card-image equal">
+                <a href="#!" class="image">
+                  <img src="assets/images/demo/look-4.jpg" alt="Image">
+                  <img src="assets/images/demo/look-4-1.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <h3 class="card-title">Sunglass</h3>
+                <span class="price">$18.00</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <a href="" class="underlined">View more looks</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- cta -->
+    <section class="py-0 no-overflow">
+      <div class="image image-scroll" style="background-image:url(assets/images/demo/background-3.jpg)"
+      data--100-bottom-top="transform: translateY(0%);"
+      data-top-bottom="transform: translateY(25%);"></div>
+      <div class="container">
+        <div class="row gutter-2 gutter-md-4 justify-content-between vh-75 py-10">
+          <div class="col-md-6 align-self-end">
+            <div class="bg-white w-50 w-lg-40 d-inline-block p-3">
+              <h2 class="fs-24"><span class="d-block text-gray">Gold Jewlery</span>Earrings & Rings</h2>
+              <a href="" class="underlined">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- look -->
+    <section>
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-md-6">
+            <span class="eyebrow text-muted">Shop the look</span>
+            <h2>Trending Looks</h2>
+          </div>
+          <div class="col-md-6 text-right">
+            <a href="" class="underlined">View More</a>
+          </div>
+        </div>
+        <div class="row gutter-1">
+          <div class="col-lg-4">
+            <div class="card card-product">
+              <figure class="card-image">
+                <a href="#!">
+                  <img src="assets/images/demo/look-5.jpg" alt="Image">
+                  <img src="assets/images/demo/look-5-1.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-8">
+                    <h3 class="card-title font-weight-bold">Look name</h3>
+                    <small class="text-muted">3 items</small>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span class="price">$120.00</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-product">
+              <figure class="card-image">
+                <a href="#!">
+                  <img src="assets/images/demo/look-6.jpg" alt="Image">
+                  <img src="assets/images/demo/look-6-1.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-8">
+                    <h3 class="card-title font-weight-bold">Brand name</h3>
+                    <small class="text-muted">2 items</small>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span class="price">$90.00</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-product">
+              <figure class="card-image">
+                <a href="#!">
+                  <img src="assets/images/demo/product-3.jpg" alt="Image">
+                  <img src="assets/images/demo/product-3-3.jpg" alt="Image">
+                </a>
+              </figure>
+              <a href="" class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-8">
+                    <h3 class="card-title font-weight-bold">Look name</h3>
+                    <small class="text-muted">2 items</small>
+                  </div>
+                  <div class="col-4 text-right">
+                    <span class="price">$110.00</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="bg-dark pb-0 text-white">
+      <div class="container">
+        <div class="row justify-content-md-between gutter-2">
+
+          <!-- menu -->
+          <div class="order-1 col-md-8 col-lg-4">
+            <div class="row">
+              <div class="col">
+                <h4 class="eyebrow mb-1">Company</h4>
+                <ul class="menu-list">
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Our story</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Careers</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Press</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="eyebrow mb-1">Help Center</h4>
+                <ul class="menu-list">
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Shipping</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Returns</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">Payment</a></li>
+                  <li class="menu-list-item"><a href="" class="menu-list-link">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- subscribe -->
+          <div class="order-2 order-md-3 order-lg-2 col-md-8 col-lg-4">
+            <h4 class="eyebrow mb-1">Subscribe to Newsletter</h4>
+            <div class="input-combined mb-2">
+              <input type="text" class="form-control" placeholder="Your email" aria-label="Your Email" aria-describedby="button-addon2">
+              <button class="btn btn-white" type="button" id="button-addon2">Subscribe</button>
+              <span class="input-combined_indicator"></span>
+            </div>
+            <ul class="list list--horizontal">
+              <li><a href="#!" class="text-hover-facebook"><i class="fs-28 icon-facebook-square-brands"></i></a></li>
+              <li><a href="#!" class="text-hover-instagram"><i class="fs-28 icon-instagram-square-brands"></i></a></li>
+              <li><a href="#!" class="text-hover-twitter"><i class="fs-28 icon-twitter-square-brands"></i></a></li>
+              <li><a href="#!" class="text-hover-pinterest"><i class="fs-28 icon-pinterest-square-brands"></i></a></li>
+            </ul>
+          </div>
+
+          <!-- settings -->
+          <div class="order-3 order-md-2 order-lg-3 col-md-4 col-lg-3">
+            <h4 class="eyebrow mb-1">Region & Currency</h4>
+            <div class="select-frame mb-2">
+              <select class="custom-select custom-select-lg mb-2" id="countrySelect2">
+                <option value="1">United States</option>
+                <option value="2">Germany</option>
+                <option value="3">France</option>
+              </select>
+            </div>
+            <div class="select-frame">
+              <select class="custom-select custom-select-lg" id="curencySelect2">
+                <option value="1">USD</option>
+                <option value="2">EUR</option>
+                <option value="3">RUB</option>
+              </select>
+            </div>
+            <ul class="list list--horizontal mt-2">
+              <li><img src="assets/images/demo/visa-1.svg" class="payment" alt="Image"></li>
+              <li><img src="assets/images/demo/master-card-1.svg" class="payment" alt="Image"></li>
+              <li><img src="assets/images/demo/amex-1.svg" class="payment" alt="Image"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-transparent mt-8 py-2">
+        <div class="container">
+          <div class="row align-items-center gutter-1">
+            <div class="col-md-8">
+              <p class="small text-muted">&copy; 2020 SHOPY. Product images by <a href="https://www.oakandfort.com" class="underline">OAK + FORT</a>. Bootstrap template by <a href="https://htmlhunters.com" class="underline">HTMLHUNTERS</a>.</p>
+            </div>
+            <div class="col-md-4 text-md-right text-muted">
+              <ul class="list list--horizontal list--separated">
+                <li>
+                  <a class="small underline" href="#!">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="small underline" href="#!">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
+
+
+{% endblock %}

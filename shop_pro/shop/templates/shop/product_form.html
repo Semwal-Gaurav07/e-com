@@ -1,0 +1,12 @@
+<!-- templates/product/product_form.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>{% if form.instance.pk %}Edit Product{% else %}Add Product{% endif %}</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">{% if form.instance.pk %}Update{% else %}Create{% endif %}</button>
+  </form>
+  <a href="{% url 'product_list' %}">Back to Product List</a>
+{% endblock %}
