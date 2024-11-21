@@ -4,20 +4,36 @@
     <h2 class="text-center mb-4">Our Products</h2>
     <div class="row">
         {% for product in products %}
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
+            <div class="col-md-4 mb-4" style="width: fit-content;height: auto;">
+                <div class="card h-100 shadow-sm" style="transition: transform 0.3s, box-shadow 0.3s; border: none; overflow: hidden;">
                     <!-- Wrap the image in a link to the product detail page -->
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+                    <a href="{% url 'product_detail' slug=product.slug %}">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}" style="object-fit: cover; height: 280px;width:370px;">
                     </a>
-                    <div class="card-body">
+                    <div class="card-body" style="text-align: center; height: 100%; width: 350px;">
                         <h5 class="card-title">{{ product.title }}</h5>
-                        <p class="card-text">Price: ${{ product.price }}</p>
+                        <p class="card-text" style="font-size: 1.1em; color: #555;">Price: ₹{{ product.price }}</p>
                         <!-- Link to the product detail page for more details -->
-                        <a href="{% url 'product_detail' product.id %}" class="btn btn-primary">View Details</a>
+                        <a href="{% url 'product_detail' slug=product.slug %}" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; transition: background-color 0.3s;">View Details</a>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
+
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img:hover {
+            filter: brightness(90%);
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
 {% endblock %}

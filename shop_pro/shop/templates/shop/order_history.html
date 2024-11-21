@@ -1,0 +1,72 @@
+{% extends 'shop/base_generic.html' %}
+
+{% block content %}
+    <h1>Your Order History</h1>
+    {% if orders %}
+    <table class="order-history-table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Items</th>
+                <th>Total Price</th>
+                <th>Approval Status</th>
+                <th>Order Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.order_items }}</td>
+                <td>₹{{ order.total_price }}</td>
+                <td>{{ order.get_approval_status_display }}</td>
+                <td>{{ order.get_order_status_display }}</td>
+                <td>{{ order.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>You have no past orders.</p>
+    {% endif %}
+
+    <style>
+        /* Custom Styles for Order History Table */
+        .order-history-table {
+            width: 100%; /* Full width of the container */
+            border-collapse: collapse; /* Remove space between table cells */
+            margin-top: 20px; /* Space above the table */
+        }
+
+        .order-history-table th, .order-history-table td {
+            border: 1px solid #ddd; /* Light gray border */
+            padding: 12px; /* Padding for table cells */
+            text-align: left; /* Left-align text */
+        }
+
+        .order-history-table th {
+            background-color: #f2f2f2; /* Light gray background for header */
+            color: #333; /* Darker text color for header */
+            font-weight: bold; /* Bold text for header */
+        }
+
+        .order-history-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Zebra striping for even rows */
+        }
+
+        .order-history-table tr:hover {
+            background-color: #f1f1f1; /* Light gray background on hover */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Space below the heading */
+            color: #007bff; /* Bootstrap primary color for the heading */
+        }
+
+        p {
+            font-size: 1.1rem; /* Slightly larger font for the message */
+            color: #555; /* Softer color for the message */
+        }
+    </style>
+{% endblock %}

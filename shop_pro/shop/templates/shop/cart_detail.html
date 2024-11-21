@@ -2,10 +2,12 @@
 
 {% block content %}
     <h1>Your Shopping Cart</h1>
+
     <table class="table">
         <thead>
             <tr>
                 <th>Product</th>
+                <th>Image</th>
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Total</th>
@@ -13,26 +15,37 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Loop through each item in the cart -->
-            {% for item in cart.items.all %}
+            {% for item in cart_items %}
                 <tr>
                     <td>{{ item.product.title }}</td>
+                    <td><img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" style="width: 50px; height: 50px;"></td>
                     <td>{{ item.quantity }}</td>
                     <td>${{ item.product.price }}</td>
-                    <td>${{ item.get_total_price }}</td>
+                    <td>${{ item.product.price|floatformat:2 }}</td>
                     <td>
-                        <!-- Button to reduce the quantity by 1 -->
-                        <a href="{% url 'update_cart_quantity' item.id 1 %}" class="btn btn-warning">Remove 1</a>
-                        <a href="{% url 'update_cart_quantity' item.id 1 %}" class="btn btn-success">Add 1</a>
+                        <form action="{% url 'update_cart_quantity' item.id 'increase' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-success btn-sm">+</button>
+                        </form>
+                        <form action="{% url 'update_cart_quantity' item.id 'decrease' %}" method="post" style="margin-top: 5px;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">-</button>
+                        </form>
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="3">Total Price</td>
-                <td>${{ cart.get_total_price }}</td>
+                <td colspan="4"><strong>Total Price:</strong></td>
+                <td>${{ total_price|floatformat:2 }}</td>
             </tr>
         </tfoot>
     </table>
+
+    <!-- Checkout Form -->
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-lg">Proceed to Checkout</button>
+    </form>
 {% endblock %}

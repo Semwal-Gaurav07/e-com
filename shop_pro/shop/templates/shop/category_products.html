@@ -1,0 +1,23 @@
+<!-- category_products.html -->
+{% extends "shop/base_generic.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>{{ category.name }} Products</h2>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.title }}</h5>
+                           
+                            <p><strong>Price:</strong> ₹{{ product.price }}</p>
+                            <a href="{% url 'product_detail' slug=product.slug %}" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; transition: background-color 0.3s;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

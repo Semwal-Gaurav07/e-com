@@ -1,0 +1,39 @@
+{% extends 'shop/base_generic.html' %}
+
+{% block content %}
+<h1 style="text-align: center;">Review Your Order</h1>
+
+<table style="width: 80%; margin: auto; border-collapse: collapse;">
+    <thead>
+        <tr style="background-color: #f4f4f4;">
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+        <tr>
+            <td>{{ item.product.title }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.product.price }}</td>
+            <td>${{ item.get_total_price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" style="text-align: right; font-weight: bold;">Total Price</td>
+            <td>₹{{ total_price }}</td>
+        </tr>
+    </tfoot>
+</table>
+
+<form action="" method="post" style="text-align: center; margin-top: 20px;">
+    {% csrf_token %}
+    <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Proceed to Payment
+    </button>
+</form>
+{% endblock %}

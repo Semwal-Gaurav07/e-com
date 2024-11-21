@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassmorphism Signup Form</title>
+    <title>Glassmorphism Sign-Up Form</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
 
@@ -37,7 +37,7 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             background: rgba(255, 255, 255, 0.1);
-            margin-left: 450px; /* Adjust as needed */
+            margin-left: 430px;
         }
 
         h2 {
@@ -104,6 +104,16 @@
             margin-top: 30px;
             color: #fff;
         }
+
+        .login a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -112,22 +122,21 @@
             {% csrf_token %}
             <h2>Sign Up</h2>
             <div class="input-field">
-          
                 <input type="text" name="username" required>
-                
                 <label>Enter your username</label>
             </div>
+  
             <div class="input-field">
-                <input type="password" name="password" required>
-                <label>Enter your password</label>
+                <input type="password" name="password1" required>
+                <label>Create a password</label>
             </div>
             <div class="input-field">
-                <input type="password" name="password_confirmation" required>
-                <label>Re-Enter your password</label>
+                <input type="password" name="password2" required>
+                <label>Confirm your password</label>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Sign Up</button>
             <div class="login">
-                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+                <p>Already have an account? <a href="{% url 'login' %}">Log In</a></p>
             </div>
         </form>
     </div>
